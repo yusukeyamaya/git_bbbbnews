@@ -1,0 +1,13 @@
+<div class="news-contents">
+  <article>
+  <div class="post-info">
+    <% @contents.each do |content| %>
+      <p class="post-date"><%= content.date %></p>
+      <p class="post-team"><%= content.team %><p>
+      <p class="post-title"><%= content.title %></p>
+      <a href = "<%= content.link%>" target="_blank"><p class="post-link">詳細</p></a>
+    <% end %>
+    <%= paginate(@contents) %>
+  </div>
+  </article>
+</div>
